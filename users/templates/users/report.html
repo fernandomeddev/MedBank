@@ -1,0 +1,31 @@
+{% extends 'users/profile_base_layout.html' %}
+
+{% block bodycontent %}
+<section id="welcome_post" class="col-9">
+    <div class=" table-responsive-sm">
+        <table class="table-hover table-bordered" style="width:100%">
+            <thead style="text-align:center">
+            <tr>
+                <th scope="col">Destinatario</th>
+                <th scope="col">Valor</th>
+                         
+            </tr>
+            </thead>
+            <tbody style="text-align:center">
+
+            {%for tag in tags %}
+
+            <tr>
+
+                <td>{{ tag.account_number }}</td>
+                <td>{{ tag.balance }}</td>
+              
+
+            </tr>
+            {%endfor%}
+            </tbody>
+        </table>
+    
+    
+</section>
+{% endblock %}
